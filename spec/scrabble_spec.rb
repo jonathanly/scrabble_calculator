@@ -55,7 +55,13 @@ RSpec.describe Scrabble do
 
   it "calculates double letter score correctly" do
     expect(@scrabble.double_letter("example", "x")).to eq 26
-    # expect(@scrabble.triple_word("unicorn")).to eq 27
-    # expect(@scrabble.triple_word("developer")).to eq 45
+    expect(@scrabble.double_letter("unicorn", "c")).to eq 12
+    expect(@scrabble.double_letter("developer", "e")).to eq 16
+  end
+
+  it "calculates triple letter score correctly" do
+    expect(@scrabble.triple_letter("example", "x")).to eq 34
+    expect(@scrabble.triple_letter("unicorn", "c")).to eq 15
+    expect(@scrabble.triple_letter("developer", "e")).to eq 17
   end
 end

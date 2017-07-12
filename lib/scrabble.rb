@@ -33,4 +33,8 @@ class Scrabble
   def double_letter(string, letter)
     score(string) + Scrabble::LETTER_VALUES[letter.upcase]
   end
+
+  def triple_letter(string, letter)
+    score(string) + (Scrabble::LETTER_VALUES[letter.upcase] * 2)
+  end
 end
