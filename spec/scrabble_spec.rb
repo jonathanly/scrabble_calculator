@@ -40,4 +40,10 @@ RSpec.describe Scrabble do
       expect(@scrabble.score("eXaMplE")).to eq 18
     end
   end
+
+  it "calculates double word score correctly" do
+    expect(@scrabble.double_word("example")).to eq 36
+    expect(@scrabble.double_word("unicorn")).to eq 18
+    expect(@scrabble.double_word("developer")).to eq 30
+  end
 end

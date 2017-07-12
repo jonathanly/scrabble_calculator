@@ -22,5 +22,7 @@ class Scrabble
     end
   end
 
-
+  def double_word(string)
+    score(string) * 2
+  end
 end
