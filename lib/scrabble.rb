@@ -11,7 +11,7 @@ class Scrabble
   }
 
   def convert_to_letter_values(word)
-    word.upcase.split('').map { |letter| Scrabble::LETTER_VALUES[letter] }
+    word.upcase.split('').map { |letter| LETTER_VALUES.fetch(letter, 0) }
   end
 
   def score(word)
@@ -31,10 +31,11 @@ class Scrabble
   end
 
   def double_letter(word, letter)
-    score(word) + Scrabble::LETTER_VALUES[letter.upcase]
+    score(word) + LETTER_VALUES.fetch(letter.upcase, 0)
   end
 
   def triple_letter(word, letter)
-    score(word) + (Scrabble::LETTER_VALUES[letter.upcase] * 2)
+    score(word) + (LETTER_VALUES.fetch(letter.upcase, 0) * 2)
   end
+
 end
