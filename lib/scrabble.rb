@@ -11,7 +11,7 @@ class Scrabble
   }
 
   def convert_to_letter_values(string)
-    string.upcase.split('').map { |char| Scrabble::LETTER_VALUES[char] }
+    string.upcase.split('').map { |letter| Scrabble::LETTER_VALUES[letter] }
   end
 
   def score(string)
@@ -28,5 +28,9 @@ class Scrabble
 
   def triple_word(string)
     score(string) * 3
+  end
+
+  def double_letter(string, letter)
+    score(string) + Scrabble::LETTER_VALUES[letter.upcase]
   end
 end
