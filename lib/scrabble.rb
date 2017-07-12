@@ -13,4 +13,10 @@ class Scrabble
   def convert_to_letter_values(string)
     string.upcase.split('').map { |char| Scrabble::LETTER_VALUES[char] }
   end
+
+  def score(string)
+    if string == nil || string.empty?
+      return 0
+    end
+  end
 end
