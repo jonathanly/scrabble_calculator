@@ -17,6 +17,10 @@ class Scrabble
   def score(string)
     if string == nil || string.empty?
       return 0
+    else
+      convert_to_letter_values(string).reduce(:+)
     end
   end
+
+
 end

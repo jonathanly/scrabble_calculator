@@ -24,6 +24,20 @@ RSpec.describe Scrabble do
     it "returns 0 an empty string is passed as a parameter" do
       expect(@scrabble.score("")).to eq 0
     end
-  end
 
+    it "returns a number when a string is passed as a parameter" do
+      expect(@scrabble.score("example")).to be_an_instance_of Fixnum
+    end
+
+    it "returns the correct score for a word" do
+      expect(@scrabble.score("example")).to eq 18
+      expect(@scrabble.score("unicorn")).to eq 9
+      expect(@scrabble.score("developer")).to eq 15
+    end
+
+    it "is insensitive to character case" do
+      expect(@scrabble.score("example")).to eq 18
+      expect(@scrabble.score("eXaMplE")).to eq 18
+    end
+  end
 end
