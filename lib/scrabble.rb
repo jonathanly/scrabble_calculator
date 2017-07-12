@@ -10,31 +10,31 @@ class Scrabble
     "Y" => 4, "Z" => 10
   }
 
-  def convert_to_letter_values(string)
-    string.upcase.split('').map { |letter| Scrabble::LETTER_VALUES[letter] }
+  def convert_to_letter_values(word)
+    word.upcase.split('').map { |letter| Scrabble::LETTER_VALUES[letter] }
   end
 
-  def score(string)
-    if string == nil || string.empty?
+  def score(word)
+    if word == nil || word.empty?
       return 0
     else
-      convert_to_letter_values(string).reduce(:+)
+      convert_to_letter_values(word).reduce(:+)
     end
   end
 
-  def double_word(string)
-    score(string) * 2
+  def double_word(word)
+    score(word) * 2
   end
 
-  def triple_word(string)
-    score(string) * 3
+  def triple_word(word)
+    score(word) * 3
   end
 
-  def double_letter(string, letter)
-    score(string) + Scrabble::LETTER_VALUES[letter.upcase]
+  def double_letter(word, letter)
+    score(word) + Scrabble::LETTER_VALUES[letter.upcase]
   end
 
-  def triple_letter(string, letter)
-    score(string) + (Scrabble::LETTER_VALUES[letter.upcase] * 2)
+  def triple_letter(word, letter)
+    score(word) + (Scrabble::LETTER_VALUES[letter.upcase] * 2)
   end
 end
