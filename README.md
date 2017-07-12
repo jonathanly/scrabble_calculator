@@ -12,7 +12,8 @@ In the terminal, create an instance of the Scrabble class
 > game = Scrabble.new
 ```
 
-`game.score(string)` takes a string as an argument and calculates the strings scrabble score. An empty string `('')` or `nil` will return 0
+#### `score(string)`
+Takes a string as an argument and calculates the strings scrabble score. An empty string `('')` or `nil` will return 0.
 ```rb
 > game.score('example')
 => 18
@@ -24,7 +25,8 @@ In the terminal, create an instance of the Scrabble class
 => 0
 ```
 
-`game.double_word(string)` & `game.triple_word(string)` also takes a string argument and returns the string's double word and triple word score respectively.
+#### `double_word(string)` & `triple_word(string)`
+Also takes a string argument and returns the string's double word and triple word score respectively.
 ```rb
 > game.double_word('example')
 => 36
@@ -33,7 +35,8 @@ In the terminal, create an instance of the Scrabble class
 => 54
 ```
 
-`game.double_letter(string, letter)` & `game.triple_letter(string, letter)` takes two string arguments: the string and the letter to apply the double or triple letter score.
+#### `double_letter(string, letter)` & `triple_letter(string, letter)`
+Takes two string arguments: the string and the letter to apply the double or triple letter score.
 ```rb
 > game.double_letter('example', 'x')
 => 26
