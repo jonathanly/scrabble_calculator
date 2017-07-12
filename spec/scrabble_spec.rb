@@ -46,4 +46,10 @@ RSpec.describe Scrabble do
     expect(@scrabble.double_word("unicorn")).to eq 18
     expect(@scrabble.double_word("developer")).to eq 30
   end
+
+  it "calculates triple word score correctly" do
+    expect(@scrabble.triple_word("example")).to eq 54
+    expect(@scrabble.triple_word("unicorn")).to eq 27
+    expect(@scrabble.triple_word("developer")).to eq 45
+  end
 end

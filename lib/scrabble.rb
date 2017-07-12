@@ -25,4 +25,8 @@ class Scrabble
   def double_word(string)
     score(string) * 2
   end
+
+  def triple_word(string)
+    score(string) * 3
+  end
 end
