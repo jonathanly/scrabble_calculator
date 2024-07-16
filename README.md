@@ -4,7 +4,7 @@
 - Download
 - Navigate to root directory
 - run `irb -r ./lib/scrabble.rb`
-- Hooray! Now you're ready to get calculating
+- Hooray! Now you're ready to get calculating!
 
 ### Using the program
 In the terminal, create an instance of the Scrabble class
