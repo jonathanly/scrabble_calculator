@@ -1,4 +1,4 @@
-# Scrabble Score Calculator
+# Scrabble Score Calculator ✨
 
 ### Running the program
 - Download
