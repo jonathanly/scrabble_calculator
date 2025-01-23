@@ -44,3 +44,6 @@ Takes two string arguments: the string and the letter to apply the double or tri
 > game.triple_letter('example', 'e')
 => 20
 ```
+
+```
+```
