@@ -1,5 +1,7 @@
 # Scrabble Score Calculator ✨
 
+# blah blah test bk integration
+
 ### Running the program
 - Download
 - Navigate to root directory
